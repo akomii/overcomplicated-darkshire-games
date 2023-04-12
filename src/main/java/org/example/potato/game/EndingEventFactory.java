@@ -2,7 +2,9 @@ package org.example.potato.game;
 
 import org.example.potato.model.Event;
 import org.example.potato.model.GameState;
+import org.springframework.stereotype.Service;
 
+@Service
 public class EndingEventFactory implements AbstractEventFactory {
     
     @Override

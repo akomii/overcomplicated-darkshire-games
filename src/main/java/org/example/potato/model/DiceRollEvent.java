@@ -9,6 +9,7 @@ import lombok.experimental.FieldDefaults;
 public abstract class DiceRollEvent extends Event {
     
     int diceRoll;
+    
     protected DiceRollEvent(int diceRoll, String message) {
         super(message);
         this.diceRoll = diceRoll;

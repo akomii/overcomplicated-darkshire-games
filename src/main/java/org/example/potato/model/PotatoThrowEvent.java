@@ -1,7 +1,4 @@
-package org.example.potato.game;
-
-import org.example.potato.model.Event;
-import org.example.potato.model.GameState;
+package org.example.potato.model;
 
 public class PotatoThrowEvent extends Event {
     

@@ -1,26 +1,41 @@
 package org.example.potato.game;
 
 import org.example.potato.model.Event;
+import org.example.potato.model.EventHistory;
 import org.example.potato.model.GameState;
+import org.example.potato.model.PotatoThrowEvent;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.util.Random;
 
+@Component
+@Scope("application")
 public class MainGame {
     
-    GameState state = new GameState();
+    private GameState state;
+    
+    private final EventHistory history;
+    
+    public MainGame(GameState state, EventHistory history) {
+        this.state = state;
+        this.history = history;
+    }
+    
+    @Autowired
+    DailyEventFactory dailyEventFactory;
+    
+    @Autowired
+    GardenEventFactory gardenEventFactory;
+    
+    @Autowired
+    DoorEventFactory doorEventFactory;
+    
+    @Autowired
+    EndingEventFactory endingEventFactory;
     
     Random random = new Random();
-    
-    EventHistory history = new EventHistory();
-    
-    DailyEventFactory dailyEventFactory = new DailyEventFactory();
-    
-    GardenEventFactory gardenEventFactory = new GardenEventFactory();
-    
-    DoorEventFactory doorEventFactory = new DoorEventFactory();
-    
-    EndingEventFactory endingEventFactory = new EndingEventFactory();
-    
     
     private int rollDice() {
         return random.nextInt(6) + 1;

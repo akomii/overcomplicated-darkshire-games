@@ -1,13 +1,19 @@
 package org.example.potato.model;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Getter
+@Component
+@Scope("application")
+@JacksonXmlRootElement
 public class GameState {
     
     int destiny;
