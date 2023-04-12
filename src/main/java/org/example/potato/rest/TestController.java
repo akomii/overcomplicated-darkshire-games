@@ -3,7 +3,6 @@ package org.example.potato.rest;
 import jakarta.servlet.http.HttpSession;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
@@ -53,11 +52,6 @@ public class TestController {
         sessionExample.increment(httpSession.getId());
         return "Session count: " + sessionExample.getCount(httpSession.getId());
     }
-    
-    public static void main(String[] args) {
-        SpringApplication.run(ExampleController.class, args);
-    }
-    
     
     @Service
     @Scope("singleton")
