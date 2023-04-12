@@ -32,7 +32,8 @@ public class GameState {
     }
     
     public void decreasePotatoes() {
-        potatoes--;
+        if (potatoes != 0)
+            potatoes--;
     }
     
     public void removeXPotatoes(int x) {
@@ -44,7 +45,8 @@ public class GameState {
     }
     
     public void decreaseOrcs() {
-        orcs--;
+        if (orcs != 0)
+            orcs--;
     }
     
     public void increaseOrcRemoveCost() {
