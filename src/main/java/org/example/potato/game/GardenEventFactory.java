@@ -5,6 +5,7 @@ import org.example.potato.model.Event;
 import org.example.potato.model.GameState;
 
 public class GardenEventFactory implements AbstractEventFactory {
+    
     @Override
     public Event createEvent(int eventType) {
         return switch (eventType) {
