@@ -43,7 +43,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
                 <configuration>
-                    <mainClass>org.example.potato.rest.EndpointController</mainClass>
+                    <mainClass>org.example.potato.MyApp</mainClass>
                 </configuration>
             </plugin>
 
@@ -57,7 +57,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>org.example.potato.rest.EndpointController</mainClass>
+                            <mainClass>org.example.potato.MyApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
