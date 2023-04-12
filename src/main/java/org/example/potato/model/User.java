@@ -1,4 +1,4 @@
-package org.example.potato.rest;
+package org.example.potato.model;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
