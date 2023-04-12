@@ -14,14 +14,11 @@ import java.util.Random;
 @Scope("application")
 public class MainGame {
     
-    private GameState state;
+    @Autowired
+    GameState state;
     
-    private final EventHistory history;
-    
-    public MainGame(GameState state, EventHistory history) {
-        this.state = state;
-        this.history = history;
-    }
+    @Autowired
+    EventHistory history;
     
     @Autowired
     DailyEventFactory dailyEventFactory;
@@ -85,5 +82,13 @@ public class MainGame {
         Event event = endingEventFactory.createEvent(eventType);
         state = event.execute(state);
         history.add(event);
+    }
+    
+    public GameState getGameState() {
+        return state;
+    }
+    
+    public EventHistory getEventHistory() {
+        return history;
     }
 }

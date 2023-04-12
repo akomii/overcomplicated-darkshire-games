@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Component
 @Scope("application")
-@JacksonXmlRootElement
+@JacksonXmlRootElement(localName = "gameState")
 public class GameState {
     
     int destiny;
