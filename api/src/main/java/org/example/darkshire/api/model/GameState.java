@@ -2,7 +2,7 @@ package org.example.darkshire.api.model;
 
 import org.example.darkshire.api.enums.GameAttribute;
 
-public interface GameState <T extends Enum<T> & GameAttribute> {
+public interface GameState<T extends Enum<T> & GameAttribute> {
     
     int get(T attribute);
     
@@ -13,4 +13,6 @@ public interface GameState <T extends Enum<T> & GameAttribute> {
     boolean isFinished();
     
     void finishGame();
+    
+    void consume(Event<T> event);
 }

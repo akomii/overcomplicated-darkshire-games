@@ -6,5 +6,5 @@ public interface Event<T extends Enum<T> & GameAttribute> {
     
     String getMessage();
     
-    GameState<T> execute(GameState<T> state);
+    void execute(GameState<T> state);
 }
