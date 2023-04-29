@@ -1,16 +1,16 @@
-package org.example.potato.model;
+package org.example.darkshire.api.base;
 
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.experimental.FieldDefaults;
 
 @FieldDefaults(level = AccessLevel.PROTECTED)
-@Getter
-public abstract class DiceRollEvent extends Event {
+public abstract class AbstractDiceRollEvent extends AbstractEvent {
     
+    @Getter
     int diceRoll;
     
-    protected DiceRollEvent(int diceRoll, String message) {
+    protected AbstractDiceRollEvent(int diceRoll, String message) {
         super(message);
         this.diceRoll = diceRoll;
     }

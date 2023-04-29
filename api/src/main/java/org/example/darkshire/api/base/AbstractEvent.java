@@ -1,18 +1,17 @@
-package org.example.potato.model;
+package org.example.darkshire.api.base;
 
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.experimental.FieldDefaults;
+import org.example.darkshire.api.model.Event;
 
 @FieldDefaults(level = AccessLevel.PROTECTED)
-@Getter
-public abstract class Event {
+public abstract class AbstractEvent implements Event {
     
+    @Getter
     String message;
     
-    protected Event(String message) {
+    protected AbstractEvent(String message) {
         this.message = message;
     }
-    
-    public abstract GameState execute(GameState state);
 }
