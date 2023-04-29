@@ -15,21 +15,18 @@ public class BaseEventFactory implements EventFactory<PotatoAttribute> {
         return switch (eventType) {
             case 1, 2 -> new AbstractDiceRollEvent<>(eventType, "In the garden...") {
                 @Override
-                public GameState<PotatoAttribute> execute(GameState<PotatoAttribute> state) {
-                    return state;
+                public void execute(GameState<PotatoAttribute> state) {
                 }
             };
             case 3, 4 -> new AbstractDiceRollEvent<>(eventType, "A knock at the door...") {
                 @Override
-                public GameState<PotatoAttribute> execute(GameState<PotatoAttribute> state) {
-                    return state;
+                public void execute(GameState<PotatoAttribute> state) {
                 }
             };
             case 5, 6 -> new AbstractDiceRollEvent<>(eventType, "The world becomes a darker, more dangerous place.") {
                 @Override
-                public GameState<PotatoAttribute> execute(GameState<PotatoAttribute> state) {
+                public void execute(GameState<PotatoAttribute> state) {
                     state.increase(PotatoAttribute.REMOVECOST);
-                    return state;
                 }
             };
             default -> throw new IllegalArgumentException(String.format("Invalid event type: %d", eventType));

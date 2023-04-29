@@ -4,6 +4,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.darkshire.api.model.Event;
 import org.example.darkshire.api.model.GameState;
 import org.example.darkshire.potato.enums.PotatoAttribute;
 import org.springframework.stereotype.Component;
@@ -44,5 +45,10 @@ public class PotatoGameState implements GameState<PotatoAttribute> {
     @Override
     public void finishGame() {
         isFinished = true;
+    }
+    
+    @Override
+    public void consume(Event<PotatoAttribute> event) {
+        event.execute(this);
     }
 }
