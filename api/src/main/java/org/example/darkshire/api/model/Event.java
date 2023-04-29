@@ -1,8 +1,10 @@
 package org.example.darkshire.api.model;
 
-public interface Event {
+import org.example.darkshire.api.enums.Attribute;
+
+public interface Event<T extends Enum<T> & Attribute> {
     
     String getMessage();
     
-    GameState execute(GameState state);
+    GameState<T> execute(GameState<T> state);
 }
