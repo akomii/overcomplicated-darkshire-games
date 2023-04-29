@@ -1,12 +1,9 @@
 package org.example.darkshire.potato.enums;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.experimental.FieldDefaults;
+import lombok.RequiredArgsConstructor;
 import org.example.darkshire.api.enums.Attribute;
 
-@AllArgsConstructor
-@FieldDefaults(level = AccessLevel.PRIVATE)
+@RequiredArgsConstructor
 public enum PotatoAttribute implements Attribute {
     
     DESTINY("destiny"),

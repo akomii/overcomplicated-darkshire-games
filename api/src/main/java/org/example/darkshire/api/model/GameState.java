@@ -10,5 +10,7 @@ public interface GameState <T extends Enum<T> & Attribute> {
     
     void decrease(T attribute);
     
+    boolean isFinished();
+    
     void finishGame();
 }
