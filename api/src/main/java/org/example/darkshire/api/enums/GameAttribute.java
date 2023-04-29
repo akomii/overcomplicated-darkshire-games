@@ -1,6 +1,6 @@
 package org.example.darkshire.api.enums;
 
-public interface Attribute {
+public interface GameAttribute {
     
     String getName();
 }

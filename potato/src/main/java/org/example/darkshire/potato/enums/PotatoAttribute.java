@@ -1,10 +1,10 @@
 package org.example.darkshire.potato.enums;
 
 import lombok.RequiredArgsConstructor;
-import org.example.darkshire.api.enums.Attribute;
+import org.example.darkshire.api.enums.GameAttribute;
 
 @RequiredArgsConstructor
-public enum PotatoAttribute implements Attribute {
+public enum PotatoAttribute implements GameAttribute {
     
     DESTINY("destiny"),
     POTATOES("potatoes"),

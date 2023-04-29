@@ -1,8 +1,8 @@
 package org.example.darkshire.api.model;
 
-import org.example.darkshire.api.enums.Attribute;
+import org.example.darkshire.api.enums.GameAttribute;
 
-public interface GameState <T extends Enum<T> & Attribute> {
+public interface GameState <T extends Enum<T> & GameAttribute> {
     
     int get(T attribute);
     

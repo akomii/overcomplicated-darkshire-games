@@ -1,10 +1,10 @@
 package org.example.darkshire.api.rest;
 
-import org.example.darkshire.api.enums.Attribute;
+import org.example.darkshire.api.enums.GameAttribute;
 import org.example.darkshire.api.model.EventHistory;
 import org.example.darkshire.api.model.GameState;
 
-public interface Controller<T extends Enum<T> & Attribute> {
+public interface GameController<T extends Enum<T> & GameAttribute> {
     
     public void executeBaseEvent();
     
