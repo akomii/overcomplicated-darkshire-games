@@ -5,5 +5,5 @@ import org.example.darkshire.api.model.Event;
 
 public interface EventFactory<T extends Enum<T> & GameAttribute> {
     
-    abstract Event<T> createEvent(int eventType);
+    Event<T> createEvent(int eventType);
 }

@@ -23,7 +23,7 @@ public class PotatoGameState implements GameState<PotatoAttribute> {
     private final Map<PotatoAttribute, Integer> attributes = new EnumMap<>(PotatoAttribute.class);
     
     @Getter
-    private boolean isFinished;
+    private boolean finished;
     
     @Override
     public int get(PotatoAttribute attribute) {
@@ -44,7 +44,7 @@ public class PotatoGameState implements GameState<PotatoAttribute> {
     
     @Override
     public void finishGame() {
-        isFinished = true;
+        finished = true;
     }
     
     @Override

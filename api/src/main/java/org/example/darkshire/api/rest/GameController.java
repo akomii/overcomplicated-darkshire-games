@@ -6,9 +6,9 @@ import org.example.darkshire.api.model.GameState;
 
 public interface GameController<T extends Enum<T> & GameAttribute> {
     
-    public void executeBaseEvent();
+    void executeBaseEvent();
     
-    public GameState<T> getGameState();
+    GameState<T> getGameState();
     
-    public EventHistory<T> getEventHistory();
+    EventHistory<T> getEventHistory();
 }
