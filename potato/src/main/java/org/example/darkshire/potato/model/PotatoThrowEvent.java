@@ -1,6 +1,6 @@
 package org.example.darkshire.potato.model;
 
-import org.example.darkshire.common.base.AbstractEvent;
+import org.example.darkshire.common.model.AbstractEvent;
 import org.example.darkshire.api.model.GameState;
 import org.example.darkshire.potato.enums.PotatoAttribute;
 

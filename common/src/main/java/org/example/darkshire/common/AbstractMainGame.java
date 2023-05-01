@@ -1,4 +1,4 @@
-package org.example.darkshire.common.base;
+package org.example.darkshire.common;
 
 import lombok.Getter;
 import org.example.darkshire.api.MainGame;
@@ -8,6 +8,8 @@ import org.example.darkshire.api.model.Dice;
 import org.example.darkshire.api.model.Event;
 import org.example.darkshire.api.model.EventHistory;
 import org.example.darkshire.api.model.GameState;
+import org.example.darkshire.common.factory.AbstractBaseEventFactory;
+import org.example.darkshire.common.factory.AbstractEndingEventFactory;
 
 public abstract class AbstractMainGame<T extends Enum<T> & GameAttribute> implements MainGame<T> {
     

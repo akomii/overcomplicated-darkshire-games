@@ -2,7 +2,7 @@ package org.example.darkshire.potato.rest;
 
 import org.example.darkshire.api.model.EventHistory;
 import org.example.darkshire.api.model.GameState;
-import org.example.darkshire.common.base.AbstractGameController;
+import org.example.darkshire.common.rest.AbstractGameController;
 import org.example.darkshire.potato.PotatoGame;
 import org.example.darkshire.potato.enums.PotatoAttribute;
 import org.springframework.beans.factory.annotation.Autowired;

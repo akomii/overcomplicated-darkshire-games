@@ -1,4 +1,4 @@
-package org.example.darkshire.common.base;
+package org.example.darkshire.common.rest;
 
 import lombok.AllArgsConstructor;
 import org.example.darkshire.api.MainGame;

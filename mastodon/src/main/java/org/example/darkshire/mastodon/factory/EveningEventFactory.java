@@ -3,7 +3,7 @@ package org.example.darkshire.mastodon.factory;
 import org.example.darkshire.api.factory.EventFactory;
 import org.example.darkshire.api.model.Event;
 import org.example.darkshire.api.model.GameState;
-import org.example.darkshire.common.base.AbstractDiceRollEvent;
+import org.example.darkshire.common.model.AbstractDiceRollEvent;
 import org.example.darkshire.mastodon.enums.MastodonAttribute;
 import org.springframework.stereotype.Service;
 

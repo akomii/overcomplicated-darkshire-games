@@ -2,11 +2,10 @@ package org.example.darkshire.potato;
 
 import org.example.darkshire.api.model.Event;
 import org.example.darkshire.api.model.GameState;
-import org.example.darkshire.common.base.AbstractMainGame;
+import org.example.darkshire.common.AbstractMainGame;
 import org.example.darkshire.potato.enums.PotatoAttribute;
 import org.example.darkshire.potato.factory.DoorEventFactory;
 import org.example.darkshire.potato.factory.GardenEventFactory;
-import org.example.darkshire.potato.model.PotatoGameState;
 import org.example.darkshire.potato.model.PotatoThrowEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;

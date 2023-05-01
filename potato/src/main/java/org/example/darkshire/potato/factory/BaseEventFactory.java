@@ -1,7 +1,7 @@
 package org.example.darkshire.potato.factory;
 
 import org.example.darkshire.api.model.GameState;
-import org.example.darkshire.common.base.AbstractBaseEventFactory;
+import org.example.darkshire.common.factory.AbstractBaseEventFactory;
 import org.example.darkshire.common.model.BaseEvent;
 import org.example.darkshire.potato.enums.PotatoAttribute;
 import org.springframework.stereotype.Service;

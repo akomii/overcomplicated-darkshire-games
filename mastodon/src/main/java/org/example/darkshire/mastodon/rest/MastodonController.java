@@ -2,7 +2,7 @@ package org.example.darkshire.mastodon.rest;
 
 import org.example.darkshire.api.model.EventHistory;
 import org.example.darkshire.api.model.GameState;
-import org.example.darkshire.common.base.AbstractGameController;
+import org.example.darkshire.common.rest.AbstractGameController;
 import org.example.darkshire.mastodon.MastodonGame;
 import org.example.darkshire.mastodon.enums.MastodonAttribute;
 import org.springframework.beans.factory.annotation.Autowired;

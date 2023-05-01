@@ -1,7 +1,7 @@
 package org.example.darkshire.mastodon.model;
 
 import org.example.darkshire.api.model.Event;
-import org.example.darkshire.common.base.AbstractGameState;
+import org.example.darkshire.common.model.AbstractGameState;
 import org.example.darkshire.mastodon.enums.MastodonAttribute;
 import org.springframework.stereotype.Component;
 

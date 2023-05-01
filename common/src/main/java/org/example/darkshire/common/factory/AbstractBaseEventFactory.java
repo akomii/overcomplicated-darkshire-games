@@ -1,4 +1,4 @@
-package org.example.darkshire.common.base;
+package org.example.darkshire.common.factory;
 
 import org.example.darkshire.api.enums.GameAttribute;
 import org.example.darkshire.api.factory.EventFactory;

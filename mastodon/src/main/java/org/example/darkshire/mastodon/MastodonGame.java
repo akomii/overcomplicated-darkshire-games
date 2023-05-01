@@ -3,7 +3,7 @@ package org.example.darkshire.mastodon;
 
 import org.example.darkshire.api.model.Event;
 import org.example.darkshire.api.model.GameState;
-import org.example.darkshire.common.base.AbstractMainGame;
+import org.example.darkshire.common.AbstractMainGame;
 import org.example.darkshire.mastodon.enums.MastodonAttribute;
 import org.example.darkshire.mastodon.factory.DayEventFactory;
 import org.example.darkshire.mastodon.factory.EveningEventFactory;

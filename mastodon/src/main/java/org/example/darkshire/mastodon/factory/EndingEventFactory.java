@@ -1,6 +1,6 @@
 package org.example.darkshire.mastodon.factory;
 
-import org.example.darkshire.common.base.AbstractEndingEventFactory;
+import org.example.darkshire.common.factory.AbstractEndingEventFactory;
 import org.example.darkshire.common.model.EndingEvent;
 import org.example.darkshire.mastodon.enums.MastodonAttribute;
 import org.springframework.stereotype.Service;

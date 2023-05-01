@@ -1,4 +1,4 @@
-package org.example.darkshire.common.base;
+package org.example.darkshire.common.model;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
