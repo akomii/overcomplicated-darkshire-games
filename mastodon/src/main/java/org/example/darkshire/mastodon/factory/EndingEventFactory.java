@@ -1,16 +1,15 @@
 package org.example.darkshire.mastodon.factory;
 
-import org.example.darkshire.api.factory.EventFactory;
-import org.example.darkshire.api.model.Event;
+import org.example.darkshire.common.base.AbstractEndingEventFactory;
 import org.example.darkshire.common.model.EndingEvent;
 import org.example.darkshire.mastodon.enums.MastodonAttribute;
 import org.springframework.stereotype.Service;
 
 @Service
-public class EndingEventFactory implements EventFactory<MastodonAttribute> {
+public class EndingEventFactory extends AbstractEndingEventFactory<MastodonAttribute> {
     
     @Override
-    public Event<MastodonAttribute> createEvent(int eventType) {
+    public EndingEvent<MastodonAttribute> createEndingEvent(int eventType) {
         return switch (eventType) {
             case 1 -> new EndingEvent<>("You finally lose your temper with the wretched creature and confront it. The argument is brief, because you have no idea what it is trying to tell you, and eventually it crushed you to death using its trunk.");
             case 2 -> new EndingEvent<>("You lose all your money and your livelihood is destoryed, reduced to gigantic footprints in the ashes. The mastadon abondons you in search of someone elso to inconvenience.");

@@ -1,16 +1,15 @@
 package org.example.darkshire.mastodon.factory;
 
-import org.example.darkshire.api.factory.EventFactory;
-import org.example.darkshire.api.model.Event;
+import org.example.darkshire.common.base.AbstractBaseEventFactory;
 import org.example.darkshire.common.model.BaseEvent;
 import org.example.darkshire.mastodon.enums.MastodonAttribute;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BaseEventFactory implements EventFactory<MastodonAttribute> {
+public class BaseEventFactory extends AbstractBaseEventFactory<MastodonAttribute> {
     
     @Override
-    public Event<MastodonAttribute> createEvent(int eventType) {
+    public BaseEvent<MastodonAttribute> createBaseEvent(int eventType) {
         return switch (eventType) {
             case 1, 2, 3 -> new BaseEvent<>(eventType, "A day with your mastodon...");
             case 4, 5 -> new BaseEvent<>(eventType, "An evening at home...");
