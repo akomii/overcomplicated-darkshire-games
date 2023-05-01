@@ -1,4 +1,4 @@
-package org.example.darkshire.api.base;
+package org.example.darkshire.common.base;
 
 import lombok.Getter;
 import org.example.darkshire.api.enums.GameAttribute;
