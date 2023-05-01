@@ -1,6 +1,6 @@
 package org.example.darkshire.potato.factory;
 
-import org.example.darkshire.api.base.AbstractDiceRollEvent;
+import org.example.darkshire.common.base.AbstractDiceRollEvent;
 import org.example.darkshire.api.factory.EventFactory;
 import org.example.darkshire.api.model.Event;
 import org.example.darkshire.api.model.GameState;
