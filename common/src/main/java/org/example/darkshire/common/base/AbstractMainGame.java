@@ -12,10 +12,10 @@ import org.example.darkshire.api.model.GameState;
 public abstract class AbstractMainGame<T extends Enum<T> & GameAttribute> implements MainGame<T> {
     
     @Getter
-    protected GameState<T> gameState;
+    private GameState<T> gameState;
     
     @Getter
-    protected EventHistory<T> eventHistory;
+    private EventHistory<T> eventHistory;
     
     protected AbstractBaseEventFactory<T> baseEventFactory;
     
@@ -24,7 +24,13 @@ public abstract class AbstractMainGame<T extends Enum<T> & GameAttribute> implem
     protected Dice dice;
     
     protected void executeEvent(Event<T> event) {
-        gameState.consume(event);
+        if (!gameState.isFinished())
+            gameState.consume(event);
+    }
+    
+    protected void addToEventHistory(Event<T> event) {
+        if (!gameState.isFinished())
+            eventHistory.add(event);
     }
     
     protected void rollEventOfFactory(EventFactory<T> factory) {
