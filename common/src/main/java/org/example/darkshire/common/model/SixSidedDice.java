@@ -6,10 +6,10 @@ import java.util.Random;
 
 public class SixSidedDice implements Dice {
     
-    private final Random random = new Random();
+    private static final Random RANDOM = new Random();
     
     @Override
     public int roll() {
-        return random.nextInt(6) + 1;
+        return RANDOM.nextInt(6) + 1;
     }
 }
