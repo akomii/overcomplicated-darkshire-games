@@ -1,16 +1,15 @@
 package org.example.darkshire.potato.factory;
 
-import org.example.darkshire.api.factory.EventFactory;
-import org.example.darkshire.api.model.Event;
+import org.example.darkshire.common.base.AbstractEndingEventFactory;
 import org.example.darkshire.common.model.EndingEvent;
 import org.example.darkshire.potato.enums.PotatoAttribute;
 import org.springframework.stereotype.Service;
 
 @Service
-public class EndingEventFactory implements EventFactory<PotatoAttribute> {
+public class EndingEventFactory extends AbstractEndingEventFactory<PotatoAttribute> {
     
     @Override
-    public Event<PotatoAttribute> createEvent(int eventType) {
+    public EndingEvent<PotatoAttribute> createEndingEvent(int eventType) {
         return switch (eventType) {
             case 1 -> new EndingEvent<>("An interfering bard or wizard turns up at your doorstep with a quest, and you are whisked away against your will on an adventure.");
             case 2 -> new EndingEvent<>("You have enough potatoes that you can go underground and not return to the surface until the danger is past. You nestle down into your burrow and enjoy your well earned rest.");

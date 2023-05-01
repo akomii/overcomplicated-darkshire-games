@@ -1,17 +1,16 @@
 package org.example.darkshire.potato.factory;
 
-import org.example.darkshire.api.factory.EventFactory;
-import org.example.darkshire.api.model.Event;
 import org.example.darkshire.api.model.GameState;
+import org.example.darkshire.common.base.AbstractBaseEventFactory;
 import org.example.darkshire.common.model.BaseEvent;
 import org.example.darkshire.potato.enums.PotatoAttribute;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BaseEventFactory implements EventFactory<PotatoAttribute> {
+public class BaseEventFactory extends AbstractBaseEventFactory<PotatoAttribute> {
     
     @Override
-    public Event<PotatoAttribute> createEvent(int eventType) {
+    public BaseEvent<PotatoAttribute> createBaseEvent(int eventType) {
         return switch (eventType) {
             case 1, 2 -> new BaseEvent<>(eventType, "In the garden...");
             case 3, 4 -> new BaseEvent<>(eventType, "A knock at the door...");
