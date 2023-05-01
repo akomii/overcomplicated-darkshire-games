@@ -4,7 +4,6 @@ import org.example.darkshire.api.enums.GameAttribute;
 import org.example.darkshire.api.factory.EventFactory;
 import org.example.darkshire.api.model.Event;
 import org.example.darkshire.common.model.BaseEvent;
-import org.example.darkshire.common.model.EndingEvent;
 
 public abstract class AbstractBaseEventFactory<T extends Enum<T> & GameAttribute> implements EventFactory<T> {
     
