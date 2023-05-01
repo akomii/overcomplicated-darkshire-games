@@ -44,13 +44,6 @@ public class PotatoGame extends AbstractMainGame<PotatoAttribute> {
             executeEndingEvent(3);
     }
     
-    @Override
-    protected void executeEndingEvent(int eventType) {
-        Event<PotatoAttribute> event = endingEventFactory.createEvent(eventType);
-        executeEvent(event);
-        eventHistory.add(event);
-    }
-    
     public void executePotatoThrowEvent() {
         PotatoThrowEvent event = new PotatoThrowEvent();
         executeEvent(event);

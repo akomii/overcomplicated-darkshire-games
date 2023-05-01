@@ -33,7 +33,11 @@ public abstract class AbstractMainGame<T extends Enum<T> & GameAttribute> implem
         eventHistory.add(event);
     }
     
-    protected abstract void checkAndExecuteEndingEvent();
+    protected void executeEndingEvent(int eventType) {
+        Event<T> event = endingEventFactory.createEvent(eventType);
+        executeEvent(event);
+        eventHistory.add(event);
+    }
     
-    protected abstract void executeEndingEvent(int eventType);
+    protected abstract void checkAndExecuteEndingEvent();
 }
