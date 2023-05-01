@@ -1,6 +1,6 @@
 package org.example.darkshire.potato;
 
-import org.example.darkshire.api.base.AbstractMainGame;
+import org.example.darkshire.common.base.AbstractMainGame;
 import org.example.darkshire.api.factory.EventFactory;
 import org.example.darkshire.api.model.Dice;
 import org.example.darkshire.api.model.Event;
